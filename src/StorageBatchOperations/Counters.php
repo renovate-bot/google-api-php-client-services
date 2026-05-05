@@ -63,6 +63,14 @@ class Counters extends \Google\Model
    */
   public $totalBytesFound;
   /**
+   * Output only. The total number of bytes affected by the transformation. For
+   * example, this counts bytes deleted for `DeleteObject` operations and bytes
+   * rewritten for `RewriteObject` operations.
+   *
+   * @var string
+   */
+  public $totalBytesTransformed;
+  /**
    * Output only. Number of objects listed.
    *
    * @var string
@@ -171,6 +179,24 @@ class Counters extends \Google\Model
   public function getTotalBytesFound()
   {
     return $this->totalBytesFound;
+  }
+  /**
+   * Output only. The total number of bytes affected by the transformation. For
+   * example, this counts bytes deleted for `DeleteObject` operations and bytes
+   * rewritten for `RewriteObject` operations.
+   *
+   * @param string $totalBytesTransformed
+   */
+  public function setTotalBytesTransformed($totalBytesTransformed)
+  {
+    $this->totalBytesTransformed = $totalBytesTransformed;
+  }
+  /**
+   * @return string
+   */
+  public function getTotalBytesTransformed()
+  {
+    return $this->totalBytesTransformed;
   }
   /**
    * Output only. Number of objects listed.
