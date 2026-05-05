@@ -20,6 +20,26 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaProjectConfigurableBillingStatus extends \Google\Model
 {
   /**
+   * Unspecified update type.
+   */
+  public const UPDATE_TYPE_UPDATE_TYPE_UNSPECIFIED = 'UPDATE_TYPE_UNSPECIFIED';
+  /**
+   * Configurable billing was created/enabled.
+   */
+  public const UPDATE_TYPE_CREATE = 'CREATE';
+  /**
+   * Configurable billing was deleted/disabled.
+   */
+  public const UPDATE_TYPE_DELETE = 'DELETE';
+  /**
+   * Subscription was scaled up (thresholds increased).
+   */
+  public const UPDATE_TYPE_SCALE_UP = 'SCALE_UP';
+  /**
+   * Subscription was scaled down (thresholds decreased).
+   */
+  public const UPDATE_TYPE_SCALE_DOWN = 'SCALE_DOWN';
+  /**
    * Optional. The currently effective Indexing Core threshold. This is the
    * threshold against which Indexing Core usage is compared for overage
    * calculations.
@@ -67,6 +87,13 @@ class GoogleCloudDiscoveryengineV1betaProjectConfigurableBillingStatus extends \
    * @var string
    */
   public $terminateTime;
+  /**
+   * Output only. The type of update performed in this operation. This field is
+   * populated in the response of UpdateProject.
+   *
+   * @var string
+   */
+  public $updateType;
 
   /**
    * Optional. The currently effective Indexing Core threshold. This is the
@@ -175,6 +202,26 @@ class GoogleCloudDiscoveryengineV1betaProjectConfigurableBillingStatus extends \
   public function getTerminateTime()
   {
     return $this->terminateTime;
+  }
+  /**
+   * Output only. The type of update performed in this operation. This field is
+   * populated in the response of UpdateProject.
+   *
+   * Accepted values: UPDATE_TYPE_UNSPECIFIED, CREATE, DELETE, SCALE_UP,
+   * SCALE_DOWN
+   *
+   * @param self::UPDATE_TYPE_* $updateType
+   */
+  public function setUpdateType($updateType)
+  {
+    $this->updateType = $updateType;
+  }
+  /**
+   * @return self::UPDATE_TYPE_*
+   */
+  public function getUpdateType()
+  {
+    return $this->updateType;
   }
 }
 
