@@ -20,8 +20,8 @@ namespace Google\Service\OrgPolicyAPI;
 class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionParameter extends \Google\Model
 {
   /**
-   * This is only used for distinguishing unset values and should never be used.
-   * Results in an error.
+   * This is only used for distinguishing unset values, and results in an error
+   * if used.
    */
   public const ITEM_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
   /**
@@ -37,8 +37,8 @@ class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionParameter extend
    */
   public const ITEM_BOOLEAN = 'BOOLEAN';
   /**
-   * This is only used for distinguishing unset values and should never be used.
-   * Results in an error.
+   * This is only used for distinguishing unset values, and results in an error
+   * if used.
    */
   public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
   /**

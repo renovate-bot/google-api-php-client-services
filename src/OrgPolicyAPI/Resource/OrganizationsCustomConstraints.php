@@ -93,12 +93,10 @@ class OrganizationsCustomConstraints extends \Google\Service\Resource
    * in one of the following forms: * `organizations/{organization_id}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Size of the pages to be returned. This is currently
-   * unsupported and will be ignored. The server may at any point start using this
-   * field to limit page size.
+   * @opt_param int pageSize Size of the pages to be returned. This is not used,
+   * but the server may at any point start using this field to limit page size.
    * @opt_param string pageToken Page token used to retrieve the next page. This
-   * is currently unsupported and will be ignored. The server may at any point
-   * start using this field.
+   * is not used, but the server may at any point start using this field.
    * @return GoogleCloudOrgpolicyV2ListCustomConstraintsResponse
    * @throws \Google\Service\Exception
    */
@@ -115,7 +113,7 @@ class OrganizationsCustomConstraints extends \Google\Service\Resource
    * (customConstraints.patch)
    *
    * @param string $name Immutable. Name of the constraint. This is unique within
-   * the organization. Format of the name should be *
+   * the organization. The name must be of the form: *
    * `organizations/{organization_id}/customConstraints/{custom_constraint_id}`
    * Example: `organizations/123/customConstraints/custom.createOnlyE2TypeVms` The
    * max length is 71 characters and the minimum length is 1. Note that the prefix

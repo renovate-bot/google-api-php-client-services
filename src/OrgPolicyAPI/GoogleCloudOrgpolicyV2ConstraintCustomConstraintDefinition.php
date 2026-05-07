@@ -20,8 +20,8 @@ namespace Google\Service\OrgPolicyAPI;
 class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinition extends \Google\Collection
 {
   /**
-   * This is only used for distinguishing unset values and should never be used.
-   * Results in an error.
+   * This is only used for distinguishing unset values, and results in an error
+   * if used.
    */
   public const ACTION_TYPE_ACTION_TYPE_UNSPECIFIED = 'ACTION_TYPE_UNSPECIFIED';
   /**

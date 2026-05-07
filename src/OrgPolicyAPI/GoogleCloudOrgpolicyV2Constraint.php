@@ -20,8 +20,8 @@ namespace Google\Service\OrgPolicyAPI;
 class GoogleCloudOrgpolicyV2Constraint extends \Google\Model
 {
   /**
-   * This is only used for distinguishing unset values and should never be used.
-   * Results in an error.
+   * This is only used for distinguishing unset values, and results in an error
+   * if set.
    */
   public const CONSTRAINT_DEFAULT_CONSTRAINT_DEFAULT_UNSPECIFIED = 'CONSTRAINT_DEFAULT_UNSPECIFIED';
   /**
