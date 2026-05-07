@@ -47,6 +47,10 @@ class GoogleChromeManagementVersionsV1ConnectorConfig extends \Google\Model
    * Root certificate connector.
    */
   public const TYPE_ROOT_STORE = 'ROOT_STORE';
+  /**
+   * Content analysis connector.
+   */
+  public const TYPE_CONTENT_ANALYSIS = 'CONTENT_ANALYSIS';
   protected $detailsType = GoogleChromeManagementVersionsV1ConnectorConfigDetails::class;
   protected $detailsDataType = '';
   /**
@@ -140,7 +144,8 @@ class GoogleChromeManagementVersionsV1ConnectorConfig extends \Google\Model
    * Required. The type of the connector.
    *
    * Accepted values: CONNECTOR_TYPE_UNSPECIFIED, REPORTING, DEVICE_TRUST, XDR,
-   * IDENTITY_BASED_ENROLLMENT, CERTIFICATE_AUTHORITY, ROOT_STORE
+   * IDENTITY_BASED_ENROLLMENT, CERTIFICATE_AUTHORITY, ROOT_STORE,
+   * CONTENT_ANALYSIS
    *
    * @param self::TYPE_* $type
    */

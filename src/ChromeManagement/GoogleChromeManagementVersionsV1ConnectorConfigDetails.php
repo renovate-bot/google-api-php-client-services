@@ -29,6 +29,8 @@ class GoogleChromeManagementVersionsV1ConnectorConfigDetails extends \Google\Mod
   protected $deviceTrustConfigDataType = '';
   protected $googleSecOpsConfigType = GoogleChromeManagementVersionsV1GoogleSecOpsConfig::class;
   protected $googleSecOpsConfigDataType = '';
+  protected $mipLabelConfigType = GoogleChromeManagementVersionsV1MipLabelConfig::class;
+  protected $mipLabelConfigDataType = '';
   protected $paloAltoNetworksConfigType = GoogleChromeManagementVersionsV1PaloAltoNetworksConfig::class;
   protected $paloAltoNetworksConfigDataType = '';
   protected $pubSubConfigType = GoogleChromeManagementVersionsV1PubSubConfig::class;
@@ -117,6 +119,22 @@ class GoogleChromeManagementVersionsV1ConnectorConfigDetails extends \Google\Mod
   public function getGoogleSecOpsConfig()
   {
     return $this->googleSecOpsConfig;
+  }
+  /**
+   * MIP label connector config.
+   *
+   * @param GoogleChromeManagementVersionsV1MipLabelConfig $mipLabelConfig
+   */
+  public function setMipLabelConfig(GoogleChromeManagementVersionsV1MipLabelConfig $mipLabelConfig)
+  {
+    $this->mipLabelConfig = $mipLabelConfig;
+  }
+  /**
+   * @return GoogleChromeManagementVersionsV1MipLabelConfig
+   */
+  public function getMipLabelConfig()
+  {
+    return $this->mipLabelConfig;
   }
   /**
    * Palo Alto Networks connector config.
