@@ -98,8 +98,18 @@ class Tool extends \Google\Model
   protected $openApiToolDataType = '';
   protected $pythonFunctionType = PythonFunction::class;
   protected $pythonFunctionDataType = '';
+  protected $remoteAgentToolType = RemoteAgentTool::class;
+  protected $remoteAgentToolDataType = '';
   protected $systemToolType = SystemTool::class;
   protected $systemToolDataType = '';
+  /**
+   * Optional. The timeout for the tool execution. If not set, the default
+   * timeout is 30 seconds for `SYNCHRONOUS` tools and 60 seconds for
+   * `ASYNCHRONOUS` tools.
+   *
+   * @var string
+   */
+  public $timeout;
   protected $toolFakeConfigType = ToolFakeConfig::class;
   protected $toolFakeConfigDataType = '';
   /**
@@ -365,6 +375,22 @@ class Tool extends \Google\Model
     return $this->pythonFunction;
   }
   /**
+   * Optional. The remote agent tool.
+   *
+   * @param RemoteAgentTool $remoteAgentTool
+   */
+  public function setRemoteAgentTool(RemoteAgentTool $remoteAgentTool)
+  {
+    $this->remoteAgentTool = $remoteAgentTool;
+  }
+  /**
+   * @return RemoteAgentTool
+   */
+  public function getRemoteAgentTool()
+  {
+    return $this->remoteAgentTool;
+  }
+  /**
    * Optional. The system tool.
    *
    * @param SystemTool $systemTool
@@ -379,6 +405,24 @@ class Tool extends \Google\Model
   public function getSystemTool()
   {
     return $this->systemTool;
+  }
+  /**
+   * Optional. The timeout for the tool execution. If not set, the default
+   * timeout is 30 seconds for `SYNCHRONOUS` tools and 60 seconds for
+   * `ASYNCHRONOUS` tools.
+   *
+   * @param string $timeout
+   */
+  public function setTimeout($timeout)
+  {
+    $this->timeout = $timeout;
+  }
+  /**
+   * @return string
+   */
+  public function getTimeout()
+  {
+    return $this->timeout;
   }
   /**
    * Optional. Configuration for tool behavior in fake mode.

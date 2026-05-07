@@ -19,7 +19,7 @@ namespace Google\Service\CustomerEngagementSuite;
 
 class Agent extends \Google\Collection
 {
-  protected $collection_key = 'transferRules';
+  protected $collection_key = 'validationErrors';
   protected $afterAgentCallbacksType = Callback::class;
   protected $afterAgentCallbacksDataType = 'array';
   protected $afterModelCallbacksType = Callback::class;
@@ -115,6 +115,13 @@ class Agent extends \Google\Collection
    * @var string
    */
   public $updateTime;
+  /**
+   * Output only. Misconfigurations or errors in the agent that may affect agent
+   * quality.
+   *
+   * @var string[]
+   */
+  public $validationErrors;
 
   /**
    * Optional. The callbacks to execute after the agent is called. The provided
@@ -503,6 +510,23 @@ class Agent extends \Google\Collection
   public function getUpdateTime()
   {
     return $this->updateTime;
+  }
+  /**
+   * Output only. Misconfigurations or errors in the agent that may affect agent
+   * quality.
+   *
+   * @param string[] $validationErrors
+   */
+  public function setValidationErrors($validationErrors)
+  {
+    $this->validationErrors = $validationErrors;
+  }
+  /**
+   * @return string[]
+   */
+  public function getValidationErrors()
+  {
+    return $this->validationErrors;
   }
 }
 

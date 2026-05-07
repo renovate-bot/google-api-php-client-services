@@ -154,8 +154,16 @@ class App extends \Google\Collection
    * @var string
    */
   public $updateTime;
+  /**
+   * Output only. Misconfigurations or warnings in the app.
+   *
+   * @var string[]
+   */
+  public $validationErrors;
   protected $variableDeclarationsType = AppVariableDeclaration::class;
   protected $variableDeclarationsDataType = 'array';
+  protected $vpcScSettingsType = VpcScSettings::class;
+  protected $vpcScSettingsDataType = '';
 
   /**
    * Optional. Audio processing configuration of the app.
@@ -571,6 +579,22 @@ class App extends \Google\Collection
     return $this->updateTime;
   }
   /**
+   * Output only. Misconfigurations or warnings in the app.
+   *
+   * @param string[] $validationErrors
+   */
+  public function setValidationErrors($validationErrors)
+  {
+    $this->validationErrors = $validationErrors;
+  }
+  /**
+   * @return string[]
+   */
+  public function getValidationErrors()
+  {
+    return $this->validationErrors;
+  }
+  /**
    * Optional. The declarations of the variables.
    *
    * @param AppVariableDeclaration[] $variableDeclarations
@@ -585,6 +609,22 @@ class App extends \Google\Collection
   public function getVariableDeclarations()
   {
     return $this->variableDeclarations;
+  }
+  /**
+   * Optional. VPC-SC settings for the app.
+   *
+   * @param VpcScSettings $vpcScSettings
+   */
+  public function setVpcScSettings(VpcScSettings $vpcScSettings)
+  {
+    $this->vpcScSettings = $vpcScSettings;
+  }
+  /**
+   * @return VpcScSettings
+   */
+  public function getVpcScSettings()
+  {
+    return $this->vpcScSettings;
   }
 }
 
