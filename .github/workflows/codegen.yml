@@ -10,7 +10,7 @@ on:
 name: codegen
 jobs:
   discovery:
-    uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@f170c864f46729cb0f9bbbb1097ae7d89440f58b # master
+    uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@51a9c81d2c158cfeecce0f65ec680ad07481a942 # master
   batch:
     runs-on: ubuntu-26.04
     needs: discovery
